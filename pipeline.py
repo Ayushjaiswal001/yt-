@@ -59,7 +59,7 @@ def generate_script(topic: str, niche: str) -> dict:
         sys.exit(1)
 
     genai.configure(api_key=api_key.strip(), transport="rest")
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 
     prompt = f"""Create a YouTube video script about: {topic}
 Niche: {niche}
