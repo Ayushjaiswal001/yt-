@@ -1,0 +1,23 @@
+name: Fix Repo Structure
+on: workflow_dispatch
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix file locations and names
+        run: |
+          # Move requirements.txt from .github/workflows/ to repo root
+          [ -f ".github/workflows/requirements.txt" ] && mv .github/workflows/requirements.txt ./requirements.txt && echo "✓ Moved requirements.txt"
+
+          # Fix case-sensitive filename: Update_topics.py → update_topics.py
+          [ -f "Update_topics.py" ] && mv Update_topics.py update_topics.py && echo "✓ Renamed Update_topics.py → update_topics.py"
+
+      - name: Commit and push
+        run: |
+          git config user.email "bot@fix.dev"
+          git config user.name "Fix Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "fix: move requirements.txt to root, fix filename case"
+          git push
