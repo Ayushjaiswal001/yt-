@@ -38,7 +38,7 @@ jobs:
         env:
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:      ${{ secrets.PEXELS_API_KEY }}
-          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON }}
+          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON_KIDS }}
           YT_CHANNEL_ID:       ${{ secrets.YT_CHANNEL_ID_KIDS }}
           TTS_VOICE:           en-IN-NeerjaNeural
           TTS_RATE:            "+0%"
@@ -53,7 +53,7 @@ jobs:
         env:
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:      ${{ secrets.PEXELS_API_KEY }}
-          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON }}
+          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON_KIDS }}
           YT_CHANNEL_ID:       ${{ secrets.YT_CHANNEL_ID_KIDS }}
           TTS_RATE:            "+5%"
           OUTPUT_DIR:          ./output/kids/shorts
