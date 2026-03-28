@@ -58,7 +58,7 @@ def generate_script(topic: str, niche: str) -> dict:
         print("ERROR: GEMINI_API_KEY not set", file=sys.stderr)
         sys.exit(1)
 
-    genai.configure(api_key=api_key)
+    genai.configure(api_key=api_key.strip(), transport="rest")
     model = genai.GenerativeModel("gemini-2.0-flash")
 
     prompt = f"""Create a YouTube video script about: {topic}
