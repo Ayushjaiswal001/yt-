@@ -15,7 +15,7 @@ def generate_topics(niche: str, count: int) -> list[dict]:
         print("ERROR: GEMINI_API_KEY not set", file=sys.stderr)
         sys.exit(1)
 
-    genai.configure(api_key=api_key)
+    genai.configure(api_key=api_key.strip(), transport="rest")
     model = genai.GenerativeModel("gemini-2.0-flash")
 
     prompt = f"""Generate {count} trending YouTube video topics for the "{niche}" niche.
