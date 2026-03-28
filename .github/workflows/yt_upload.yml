@@ -39,7 +39,7 @@ jobs:
         env:
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:      ${{ secrets.PEXELS_API_KEY }}
-          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON }}
+          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON_TECH }}
           YT_CHANNEL_ID:       ${{ secrets.YT_CHANNEL_ID_TECH }}
           TTS_VOICE:           en-IN-NeerjaNeural
           TTS_RATE:            "+5%"
@@ -54,7 +54,7 @@ jobs:
         env:
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:      ${{ secrets.PEXELS_API_KEY }}
-          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON }}
+          YT_CREDENTIALS_JSON: ${{ secrets.YT_CREDENTIALS_JSON_TECH }}
           YT_CHANNEL_ID:       ${{ secrets.YT_CHANNEL_ID_TECH }}
           TTS_RATE:            "+10%"
           OUTPUT_DIR:          ./output/shorts
